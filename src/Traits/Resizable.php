@@ -27,6 +27,16 @@ trait Resizable
         return $this->getThumbnail($image, $type);
     }
 
+    public function imageWithFormat($attribute = 'image', $format = 'webp') {
+      if (!isset($this->attributes[$attribute])) {
+        return '';
+      }
+      $image = $this->attributes[$attribute];
+      $default_ext = pathinfo($image, PATHINFO_EXTENSION);
+      $name = Str::replaceLast('.' . $default_ext, '', $image);
+      return $name . "." . $format;
+    }
+
     /**
      * Method for returning specific thumbnail of a given image format(extension) for model.
      *
