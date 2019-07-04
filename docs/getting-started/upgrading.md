@@ -11,7 +11,7 @@ Please update your versions accordingly!
 
 To update to the latest version inside of your composer.json file make sure to update the version of Voyager inside the require declaration inside of your composer.json to:
 
-`tcg/voyager": "1.2.*`
+`fareesh/voyager": "1.2.*`
 
 And then run composer update
 
@@ -113,7 +113,7 @@ The User BREAD now has its own controller. Please update your User BREAD to use 
 
 Voyager changed its way on how to load assets.  
 Assets don't get published anymore, instead they are loaded directly from the package.  
-Because of that, you can safely remove everything from your `public/vendor/tcg/voyager` folder.  
+Because of that, you can safely remove everything from your `public/vendor/fareesh/voyager` folder.  
 Also you can remove the `assets_path` config-key from `config/voyager.php`.
 
 ## Troubleshooting
